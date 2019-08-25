@@ -87,3 +87,12 @@ canvas {
 .active {
  	border: #fff 2px solid;
 }
+footer {
+	color: #fff;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+a:hover {
+	color: #4285f4;
+}

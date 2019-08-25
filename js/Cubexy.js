@@ -70,7 +70,7 @@ $.fn.extend({
         $('#' + idDownload).click(function() {
             var dataURL = canvas.toDataURL('image/png');
             $('#' + idDownload).attr('href', dataURL);
-            $('#' + idDownload).attr('download', "avatar.png");
+            $('#' + idDownload).attr('download', "gundam_avatar.png");
         });
 
         function resetCanvas() {
