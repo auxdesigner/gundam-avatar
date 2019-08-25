@@ -22,16 +22,6 @@ $.fn.extend({
         ctx.clearRect(0, 0, ctx.width, ctx.height);
 
         var base_image = [];
-        
-        // set first option to default
-        // $('#' + id + ' > div').each(function() {
-        //     menuID = $(this).attr('id');
-        //     $('#' + menuID + ' >img').each(function() {
-        //         if (!$(this).hasClass(activeItem)) {
-        //             $('#' + menuID + ' img:first-child').addClass(activeItem)
-        //         }
-        //     });
-        // });
 
         renderAvatar();
 
@@ -67,18 +57,24 @@ $.fn.extend({
             });
         }
 
+        // download image
+
+
         $('#' + idDownload).click(function() {
             var dataURL = canvas.toDataURL('image/png');
             $('#' + idDownload).attr('href', dataURL);
-            $('#' + idDownload).attr('download', "gundam_avatar.png");
+            $('#' + idDownload).attr('download', "gundam_avatar@2x.png");
         });
 
+        // reset canvas
         function resetCanvas() {
             var canvas = document.getElementById('canvas');
             var ctx = canvas.getContext('2d');
             ctx.clearRect(0, 0,  canvas.width, canvas.height);
         };
 
+
+        // randomize
         function randomize(e) {
             var elementLength = e.length;
             var randomElement = Math.floor( Math.random() * elementLength );
@@ -97,6 +93,7 @@ $.fn.extend({
             renderAvatar();
         });
 
+        // select tab
         $('#menu span').click(function(){
           $('.tab-active').removeClass('tab-active');
           $(this).addClass('tab-active');
