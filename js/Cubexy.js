@@ -104,5 +104,4 @@ $.fn.extend({
           $('#avatar >div#'+$(this).attr('data-tab')).show();
         });
     }
-
 });

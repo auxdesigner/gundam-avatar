@@ -13,19 +13,13 @@
     
 <body>
   <div class="container">
-
     <div class="col-md-12 text-center">
-      
       <canvas width="256" height="256" id="canvas">No Canvas support</canvas>
       <div>
         <a id="randomize" class="btn btn-primary">Randomize</a>
         <a id="download" class="btn btn-success">Download</a>
       </div>
-
-     
-   
     </div>
-
     <div class="col-md-12">
       <div class="panel panel-success">
         <div class="panel-heading">
@@ -35,9 +29,7 @@
               <span class="" data-tab='horn'/>Horn</span>
               <span class="" data-tab='chin'/>Chin</span>
               <span class="" data-tab='eye'/>Eye</span>
-              <span class="" data-tab='face'/>Face</span>
-              
-             
+              <span class="" data-tab='face'/>Face</span>    
             </div>
           </h3>
         </div>
@@ -88,14 +80,12 @@
         </div>
       </div>
     </div>
-
-
   </div> 
   <script>
     $('#avatar').Cubexy();
-    $('#randomize').click();
     $('#avatar >div').hide();
     $('#avatar >div#bg').show();
+    $('#randomize').click();
   </script>
 </body>
 </html>
