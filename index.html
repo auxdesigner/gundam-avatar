@@ -20,7 +20,6 @@
       <div>
         <a id="randomize" class="btn btn-primary">Randomize</a>
         <a id="download" class="btn btn-success">Download</a>
-        <a id="reset">reset</a>
       </div>
 
      
@@ -32,11 +31,11 @@
         <div class="panel-heading">
           <h3 class="panel-title"> 
             <div id="menu" class="">
-              <span class="img-thumbnail tab-active" data-tab='bg'/>Background</span>
-              <span class="img-thumbnail" data-tab='horn'/>Horn</span>
-              <span class="img-thumbnail" data-tab='chin'/>Chin</span>
-              <span class="img-thumbnail" data-tab='eye'/>Eye</span>
-              <span class="img-thumbnail" data-tab='face'/>Face</span>
+              <span class="tab-active" data-tab='bg'/>Background</span>
+              <span class="" data-tab='horn'/>Horn</span>
+              <span class="" data-tab='chin'/>Chin</span>
+              <span class="" data-tab='eye'/>Eye</span>
+              <span class="" data-tab='face'/>Face</span>
               
              
             </div>
@@ -45,6 +44,7 @@
         <div class="panel-body">
           <div id="avatar">   
               <div id="bg">
+                <img class="img-thumbnail bg-item white-bg" src="1_bg/0.png"/>
                 <img class="img-thumbnail bg-item" src="1_bg/1.png"/>
                 <img class="img-thumbnail bg-item" src="1_bg/2.png"/>
                 <img class="img-thumbnail bg-item" src="1_bg/3.png"/>
@@ -94,18 +94,8 @@
   <script>
     $('#avatar').Cubexy();
     $('#randomize').click();
-  </script>
-  <script>
-    $('#menu span').click(function(){
-      $('.tab-active').removeClass('tab-active');
-      $(this).addClass('tab-active');
-      $('#avatar >div').hide();
-      $('#avatar >div#'+$(this).attr('data-tab')).show();
-    });
     $('#avatar >div').hide();
     $('#avatar >div#bg').show();
   </script>
-
-
 </body>
 </html>

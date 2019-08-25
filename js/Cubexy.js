@@ -96,5 +96,13 @@ $.fn.extend({
 
             renderAvatar();
         });
+
+        $('#menu span').click(function(){
+          $('.tab-active').removeClass('tab-active');
+          $(this).addClass('tab-active');
+          $('#avatar >div').hide();
+          $('#avatar >div#'+$(this).attr('data-tab')).show();
+        });
     }
+
 });
