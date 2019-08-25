@@ -24,21 +24,19 @@ $.fn.extend({
         var base_image = [];
         
         // set first option to default
-        $('#' + id + ' > div').each(function() {
-            menuID = $(this).attr('id');
-            $('#' + menuID + ' >img').each(function() {
-                if (!$(this).hasClass(activeItem)) {
-                    $('#' + menuID + ' img:first-child').addClass(activeItem)
-                }
-            });
-        });
+        // $('#' + id + ' > div').each(function() {
+        //     menuID = $(this).attr('id');
+        //     $('#' + menuID + ' >img').each(function() {
+        //         if (!$(this).hasClass(activeItem)) {
+        //             $('#' + menuID + ' img:first-child').addClass(activeItem)
+        //         }
+        //     });
+        // });
 
         renderAvatar();
 
         // handle click selection
         $('#' + id + ' > div >img').click(function() {
-            ctx.clearRect(0, 0, ctx.width, ctx.height);
-
             $(this).parent().children('img').removeClass(activeItem);
             $(this).addClass(activeItem);
 
@@ -47,6 +45,9 @@ $.fn.extend({
 
         function renderAvatar() {
             canvasImgArray = 0;
+            
+            resetCanvas();
+
             $('#' + id + ' > div').each(function() {
                 menuID = $(this).attr('id');
                 $('#' + menuID + ' >img').each(function() {
@@ -72,6 +73,12 @@ $.fn.extend({
             $('#' + idDownload).attr('download', "avatar.png");
         });
 
+        function resetCanvas() {
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0,  canvas.width, canvas.height);
+        };
+
         function randomize(e) {
             var elementLength = e.length;
             var randomElement = Math.floor( Math.random() * elementLength );
@@ -80,7 +87,7 @@ $.fn.extend({
 
         $('#' + idRandom).click(function() {
             $('.img-thumbnail').removeClass(activeItem);
-
+            resetCanvas();
             randomize($(".bg-item"));
             randomize($(".face-item"));
             randomize($(".horn-item"));

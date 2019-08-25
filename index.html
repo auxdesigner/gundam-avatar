@@ -6,73 +6,21 @@
 <title>Gundam Avatar</title>
 </head>
 <script src="js/jquery-2.1.4.min.js"></script>
-<link href="css/bootstrap.min.css" rel="stylesheet" />
 <script src="js/bootstrap.min.js"></script>
 <script src="js/Cubexy.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
     
 <body>
-  <style>
-    canvas {
-      transform: scale(0.5);
-    }
-    .btn {
-      font-weight: bold; margin: 0 12px;
-      margin-bottom: 80px;
-      border-radius: 100px;
-      padding: 8px 24px;
-      text-transform: none;
-      font-size: 16px;
-    }
-    .col-md-12 {
-      float: none;
-      max-width: 780px;
-      margin: 0 auto;
-    }
-    .container {
-      
-    }
-    #colors {
-      display: none;
-    }
-    #avatar {
-      text-align: center;
-    }
-    #avatar img{ 
-      width: 100px; margin:2px; padding: 12px;
-    }
-    #menu {
-      text-align: center; font-weight: bold;
-    }
-    #menu img{ 
-      width: 64px; margin:2px; cursor:pointer; 
-    }
-    .panel-heading {
-      padding: 0;
-    }
-    .panel-success>.panel-heading {
-      background: #eee
-    }
-    #menu .tab-active {    
-      border-bottom: #222 4px solid;
-    }
-    .img-thumbnail {
-      border: rgba(0,0,0,0) 4px solid;
-      color: #444;
-      background: none;
-      cursor: pointer; margin: 0 20px;
-    }
-    .selected, .active {
-      border: #222 2px solid;
-    }
-  </style>
   <div class="container">
 
     <div class="col-md-12 text-center">
       
       <canvas width="256" height="256" id="canvas">No Canvas support</canvas>
       <div>
-        <a id="download" class="btn btn-success">Download</a>&nbsp;
         <a id="randomize" class="btn btn-primary">Randomize</a>
+        <a id="download" class="btn btn-success">Download</a>
+        <a id="reset">reset</a>
       </div>
 
      
